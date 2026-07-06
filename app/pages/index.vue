@@ -27,8 +27,44 @@ onMounted(() => {
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    overflow: hidden;
   }
+
+  .opening_logo {
+    opacity: 0;
+    animation: opening-logo-enter 1.4s linear forwards;
+  }
+
+  .opening_startButton {
+    opacity: 0;
+    animation: opening-button-enter 0.6s ease-out 1.4s forwards;
+  }
+
   .opening_startButton:active {
     transform: translate(4px, 4px);
+  }
+
+  @keyframes opening-logo-enter {
+    0% {
+      opacity: 0;
+      transform: translateY(-55vh);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes opening-button-enter {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
