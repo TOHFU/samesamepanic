@@ -26,9 +26,12 @@
   }
   .menu_about {
     width: auto;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 176px);
     scale: 1.05;
+    padding-top: 44px;
     padding-bottom: 132px;
+    transform-origin: center bottom;
+    animation: menu-about-enter 1s cubic-bezier(0.34, 1.4, 0.64, 1) forwards;
   }
   .menu_startButton {
     position: absolute;
@@ -39,5 +42,33 @@
   }
   .menu_startButton:active {
     transform: translate(4px, 4px);
+  }
+
+  @keyframes menu-about-enter {
+    0% {
+      opacity: 0;
+      transform: translateY(-70vh) scaleY(1.2);
+    }
+
+    50% {
+      opacity: 1;
+      transform: translateY(0) scaleY(0.7);
+    }
+
+    65% {
+      transform: translateY(-16px) scaleY(1.15);
+    }
+
+    80% {
+      transform: translateY(0) scaleY(0.88);
+    }
+
+    92% {
+      transform: translateY(-4px) scaleY(1.05);
+    }
+
+    100% {
+      transform: translateY(0) scaleY(1);
+    }
   }
 </style>
