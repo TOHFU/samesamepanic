@@ -19,6 +19,11 @@
         :gameTimeValue="gameTimeValue"
       />
     </div>
+    <div class="game-score-overlay">
+      <GameScore
+        v-if="isGameActive"
+      />
+    </div>
     <div
       v-if="isGameEnd"
       class="game-end-overlay"
@@ -119,9 +124,17 @@ watch(gameTimeValue, (count) => {
   }
   .game-time-overlay {
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: 46px;
+    right: 12px;
     margin: auto;
+    pointer-events: none;
+  }
+  .game-score-overlay {
+    position: absolute;
+    top: 6px;
+    right: 4px;
+    margin: auto;
+    pointer-events: none;
   }
 
 </style>
