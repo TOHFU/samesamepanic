@@ -1,0 +1,34 @@
+<template>
+  <div class="opening">
+      <img class="opening_logo" src="@/assets/images/logo.png" width="360" height="360" alt="サメサメパニック">
+      <NuxtLink to="/menu">
+        <img class="opening_startButton" src="@/assets/images/button-start.png" width="162" height="73" alt="スタート">
+      </NuxtLink>
+  </div>
+</template>
+
+<script setup lang="ts">
+const { resetScores } = useScore()
+
+onMounted(() => {
+  resetScores()
+})
+</script>
+
+<!-- styles scoped -->
+<style scoped>
+  .opening {
+    width: 100%;
+    max-width: 100vh;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+  .opening_startButton:active {
+    transform: translate(4px, 4px);
+  }
+</style>
