@@ -12,6 +12,7 @@
 html, body {
   margin: 0;
   background-color: #000;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 main {
   width: 100%;
